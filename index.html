@@ -5,21 +5,74 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>jinpingTan</title>
+    <title>tanjinping</title>
     <style>
         html, body {
+            font-family: verdana, arial, sans-serif;
             padding: 0;
             margin: 0;
             height: 100%;
             width: 100%;
         }
+
+        table {
+            width: 100%;
+            font-size: 11px;
+            color: #333;
+            border-width: 1px;
+            border-color: #999;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: #b5cfd2;
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #999;
+        }
+
+        td {
+            background: #dcddc0;
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #999;
+        }
     </style>
 </head>
 <body>
-<p>2019/05/27----------HTML元素参考</p>
-<p>2019/05/28----------HTML属性参考</p>
-<p>2019/05/29----------css参考</p>
-<p>2019/05/30----------JavaScript参考文档</p>
-<p>2019/05/31----------react or vue or other</p>
+<table>
+    <tr>
+        <th>HTML5</th>
+        <th>JavaScript</th>
+    </tr>
+</table>
+<script>
+    const table = [{
+        html: '<section></section>部分，一个区域，应该包含一个标题',
+        JavaScript: 'http://es6.ruanyifeng.com/#docs/let(每天一节，目前第2节，一共31节)',
+    }, {
+        html: '<article></article>文章，独立区域可嵌套循环使用',
+    }, {
+        html: '<nav></nav>包裹一堆超链接',
+    }, {
+        html: '<header></header><main></main><footer></footer>',
+    }, {
+        html: '<aside></aside>旁白区域，超级独立到可忽略',
+    }, {
+        html: '<figure></figure><figcaption></figcaption>后者解释文字',
+    }];
+    table.forEach((item) => {
+        const elementTr = document.createElement('tr');
+        const elementHtmlTd = document.createElement('td');
+        const elementJavaScript = document.createElement('td');
+        elementHtmlTd.textContent = item.html;
+        elementJavaScript.textContent = item.JavaScript;
+        elementTr.appendChild(elementHtmlTd);
+        elementTr.appendChild(elementJavaScript);
+        document.querySelector('table').appendChild(elementTr);
+    });
+</script>
 </body>
 </html>
