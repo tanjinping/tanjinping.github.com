@@ -49,41 +49,40 @@
     </tr>
 </table>
 <script>
-    const table = [{
-        html: '<section></section>部分，一个区域，应该包含一个标题',
-        JavaScript: 'Math.trunc方法用于去除一个数的小数部分，返回整数部分。',
-    }, {
-        html: '<article></article>文章，独立区域可嵌套循环使用',
-        JavaScript: '.includes(),确定一个字符串是否包含在另一个字符串中',
-    }, {
-        html: '<nav></nav>包裹一堆超链接',
-        JavaScript: '.repeat()方法返回一个新字符串，表示将原字符串重复n次。',
-    }, {
-        html: '<header></header><main></main><footer></footer>',
-        JavaScript: '如果某个字符串不够指定长度，会在头部或尾部补全。padStart()用于头部补全，padEnd()用于尾部补全',
-    }, {
-        html: '<aside></aside>旁白区域，超级独立到可忽略',
-        JavaScript: 'trimLeft()是trimStart()的别名，trimRight()是trimEnd()的别名,消除空格',
-    }, {
-        html: '<figure></figure><figcaption></figcaption>后者解释文字',
-        JavaScript: 'Number.isFinite()用来检查一个数值是否为有限的（finite），即不是Infinity。',
-    }, {
-        JavaScript: 'Number.parseFloat()可解析一个字符串，并返回一个浮点数,Number.isInteger()用来判断一个数值是否为整数',
-    }, {
-        JavaScript: 'Math.sign方法用来判断一个数到底是正数、负数、还是零。',
-    }, {
-        JavaScript: '6、正则的扩展,9、数组的扩展,10、对象的扩展,11、对象的新增方法,12、Symbol,13、Set 和 Map 数据结构,14、Proxy,15、Reflect,16、Promise 对象,17、Iterator 和 for...of 循环,18、Generator 函数的语法,19、Generator 函数的异步应用,20、async 函数,21、Class 的基本语法,22、Class 的继承,23、Module 的语法,24、Module 的加载实现,25、编程风格,26、读懂规格,27、异步遍历器,28、ArrayBuffer,29、最新提案,30、Decorator',
-    }];
-    table.forEach((item) => {
-        const elementTr = document.createElement('tr');
-        const elementHtmlTd = document.createElement('td');
-        const elementJavaScript = document.createElement('td');
-        elementHtmlTd.textContent = item.html;
-        elementJavaScript.textContent = item.JavaScript;
-        elementTr.appendChild(elementHtmlTd);
-        elementTr.appendChild(elementJavaScript);
-        document.querySelector('table').appendChild(elementTr);
-    });
+  const table = [{
+    html: '<section></section>部分，一个区域，应该包含一个标题',
+    JavaScript: 'Math.trunc方法用于去除一个数的小数部分，返回整数部分。',
+  }, {
+    html: '<article></article>文章，独立区域可嵌套循环使用',
+    JavaScript: '.includes(),确定一个字符串是否包含在另一个字符串中',
+  }, {
+    html: '<nav></nav>包裹一堆超链接',
+    JavaScript: '.repeat()方法返回一个新字符串，表示将原字符串重复n次。',
+  }, {
+    html: '<aside></aside>旁白区域，超级独立到可忽略',
+    JavaScript: 'trimLeft()是trimStart()的别名，trimRight()是trimEnd()的别名,消除空格',
+  }, {
+    html: '<figure></figure><figcaption></figcaption>后者解释文字',
+    JavaScript: 'Number.isFinite()用来检查一个数值是否为有限的（finite），即不是Infinity。',
+  }, {
+    JavaScript: '如果某个字符串不够指定长度，会在头部或尾部补全。padStart()用于头部补全，padEnd()用于尾部补全',
+  }, {
+    JavaScript: 'Number.parseFloat()可解析一个字符串，并返回一个浮点数,Number.isInteger()用来判断一个数值是否为整数',
+  }, {
+    JavaScript: 'Math.sign方法用来判断一个数到底是正数、负数、还是零。',
+  }, {
+    JavaScript: '6、正则的扩展,9、数组的扩展,10、对象的扩展,11、对象的新增方法,12、Symbol,13、Set 和 Map 数据结构,14、Proxy,15、Reflect,16、Promise 对象,17、Iterator 和 for...of 循环,18、Generator 函数的语法,19、Generator 函数的异步应用,20、async 函数,21、Class 的基本语法,22、Class 的继承,23、Module 的语法,24、Module 的加载实现,25、编程风格,26、读懂规格,27、异步遍历器,28、ArrayBuffer,29、最新提案,30、Decorator',
+  }]
+  table.forEach((item) => {
+    const elementTr = document.createElement('tr')
+    const elementHtmlTd = document.createElement('td')
+    const elementJavaScript = document.createElement('td')
+    elementHtmlTd.textContent = item.html
+    elementJavaScript.textContent = item.JavaScript
+    elementTr.appendChild(elementHtmlTd)
+    elementTr.appendChild(elementJavaScript)
+    document.querySelector('table').appendChild(elementTr)
+  })
 </script>
 </body>
 </html>
